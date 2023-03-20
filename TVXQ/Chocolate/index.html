@@ -5,40 +5,43 @@
 </head>
 
 <body>
-<!-- 链接列表 -->
-	<ul>
-		<li><a href="#" onclick="playAudio('Chocolate')">Play Chocolate</a></li>
-		<li><a href="#" onclick="playAudio('High Heels')">Play High Heels</a></li>
-		<li><a href="#" onclick="playAudio('Lie (Feat. CHUNG HA)')">Play Lie (Feat. CHUNG HA)</a></li>
-		<li><a href="#" onclick="playAudio('Me, Myself & I')">Play Me, Myself & I</a></li>
-		<li><a href="#" onclick="playAudio('Piano')">Play Piano</a></li>
-	</ul>
-	<audio controls>
-		<source src="Chocolate.mp3" type="audio/mpeg">
-		<track label="Chocolate">
-	</audio>
-	<audio controls>
-		<source src="High Heels.mp3" type="audio/mpeg">
-		<track label="High Heels">
-	</audio>	
-	<audio controls>
-		<source src="Lie (Feat. CHUNG HA).mp3" type="audio/mpeg">
-		<track label="Lie (Feat. CHUNG HA)">
-	</audio>	
-	<audio controls>
-		<source src="Me, Myself & I.mp3" type="audio/mpeg">
-		<track label="Me, Myself & I">
-	</audio>
-	<audio controls>	
-		<source src="Piano.mp3" type="audio/mpeg">
-		<track label="Piano">
-	</audio>	
-<!-- JavaScript函数 -->
-	<script>
-	function playAudio(id) {
-	  var audio = document.getElementById(id);
-	  audio.play();
-	}
-	</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- 音频控件 -->
+<audio id="audio" controls>
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <!-- 链接列表 -->
+  <ul>
+    <li><a href="#" class="play-song" data-src="Chocolate.mp3">Play Chocolate</a></li>
+    <li><a href="#" class="play-song" data-src="High Heels.mp3">Play High Heels</a></li>
+    <li><a href="#" class="play-song" data-src="Lie (Feat. CHUNG HA).mp3">Play Lie (Feat. CHUNG HA)</a></li>
+    <li><a href="#" class="play-song" data-src="Me, Myself & I.mp3">Play Me, Myself & I</a></li>
+    <li><a href="#" class="play-song" data-src="Piano.mp3">Play Piano</a></li>
+  </ul>
+<script>
+  $(document).ready(function() {
+    // 获取音频控件和链接列表
+    var audio = $('#audio')[0];
+    var links = $('.play-song');
+  
+    // 处理链接的点击事件
+    links.click(function(event) {
+      // 阻止默认行为
+      event.preventDefault();
+  
+      // 获取音频文件的URL
+      var src = $(this).data('src');
+  
+      // 更新音频控件的源
+      audio.src = src;
+  
+      // 播放音频
+      audio.play();
+    });
+  });
+</script>
 </body>
 </html>
