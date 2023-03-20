@@ -8,7 +8,6 @@
 </head>
 <body>
 
-```html
 <ul>
 	<li><a href="http://wargreymon.me/TVXQ/Colors ~Melody And Harmony~">Colors ~Melody And Harmony~</a></li>
 	<li><a href="http://wargreymon.me/TVXQ/Flawless Love">Flawless Love</a></li>
@@ -23,11 +22,11 @@
 	<li><a href="http://wargreymon.me/TVXQ/The Truth of Love">The Truth of Love	</a></li>
 	<li><a href="http://wargreymon.me/TVXQ/TOMORROW">TOMORROW</a></li>
 	<li><a href="http://wargreymon.me/TVXQ/Close To You">Close To You</a></li>
-	<li><a href="http://wargreymon.me/TVXQ/Chocolate - The 1st Mini Album">Chocolate - The 1st Mini Album</a></li>
+	<li><a href="http://wargreymon.me/TVXQ/Chocolate">Chocolate - The 1st Mini Album</a></li>
 	<li><a href="http://wargreymon.me/TVXQ/True Colors - The 1st Mini Album">True Colors - The 1st Mini Album</a></li>
 	<li><a href="http://wargreymon.me/TVXQ/NOIR - The 2nd Mini Album">NOIR - The 2nd Mini Album</a></li>
 </ul>
-```
+
 <script>
     document.write("Love In The Ice\n");
 </script>
