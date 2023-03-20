@@ -5,30 +5,40 @@
 </head>
 
 <body>
-	<h1>Chocolate-The 1st Mini Album</h1>
+<!-- 链接列表 -->
 	<ul>
-		<li><a href="Chocolate.mp3">Chocolate</a></li>
-		<li><a href="High Heels.mp3">High Heels</a></li>
-		<li><a href="Lie (Feat. CHUNG HA).mp3">Lie (Feat. CHUNG HA)</a></li>
-        <li><a href="Me, Myself & I.mp3">Me, Myself & I</a></li>
-        <li><a href="Piano.mp3">Piano</a></li>
-		<!-- 添加更多音频文件 -->
+		<li><a href="#" onclick="playAudio('Chocolate')">Play Chocolate</a></li>
+		<li><a href="#" onclick="playAudio('High Heels')">Play High Heels</a></li>
+		<li><a href="#" onclick="playAudio('Lie (Feat. CHUNG HA)')">Play Lie (Feat. CHUNG HA)</a></li>
+		<li><a href="#" onclick="playAudio('Me, Myself & I')">Play Me, Myself & I</a></li>
+		<li><a href="#" onclick="playAudio('Piano')">Play Piano</a></li>
 	</ul>
-
-<script>
-	var audio = new Audio();
-	var links = document.getElementsByTagName("a");
-
-
-	for(var i = 0; i < links.length; i++) {
-		links[i].addEventListener("click", function(event) {
-			event.preventDefault();
-			audio.src = this.href;
-			audio.play();
-		});
+	<audio controls>
+		<source src="Chocolate.mp3" type="audio/mpeg">
+		<track label="Chocolate">
+	</audio>
+	<audio controls>
+		<source src="High Heels.mp3" type="audio/mpeg">
+		<track label="High Heels">
+	</audio>	
+	<audio controls>
+		<source src="Lie (Feat. CHUNG HA).mp3" type="audio/mpeg">
+		<track label="Lie (Feat. CHUNG HA)">
+	</audio>	
+	<audio controls>
+		<source src="Me, Myself & I.mp3" type="audio/mpeg">
+		<track label="Me, Myself & I">
+	</audio>
+	<audio controls>	
+		<source src="Piano.mp3" type="audio/mpeg">
+		<track label="Piano">
+	</audio>	
+<!-- JavaScript函数 -->
+	<script>
+	function playAudio(id) {
+	  var audio = document.getElementById(id);
+	  audio.play();
 	}
-
-</script>
-
+	</script>
 </body>
 </html>
