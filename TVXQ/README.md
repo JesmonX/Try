@@ -9,8 +9,9 @@
 <body>
 
 <script>
-    document.write("Love In The Ice");
+    document.write("Love In The Ice\n");
 </script>
+
 
 
 
@@ -19,7 +20,13 @@
   <source src="The Fourth Album 'MIROTIC'/Love In The Ice.ogg" type="audio/ogg">
   <embed height="50" width="100" src="The Fourth Album 'MIROTIC'/Love In The Ice.mp3">
 </audio>
+<script>
+    document.write("\n");
+</script>
 
+<script>
+    document.write("All That Love\n");
+</script>
 
 
 <audio controls>
